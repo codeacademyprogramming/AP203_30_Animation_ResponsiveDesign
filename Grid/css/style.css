@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxes .box-item{
+    width: 25%;
+    height: 150px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+
+@media only screen and (max-width: 768px) 
+{
+    .box-item{
+        width: 100% !important;
+    }
+}
+
+@media only screen  and (min-width:768px){
+    .box-item{
+        width: 50% !important;
+    }
+}
+
+@media only screen  and (min-width:992px){
+    .box-item{
+        width: 25% !important;
+    }
+}
+

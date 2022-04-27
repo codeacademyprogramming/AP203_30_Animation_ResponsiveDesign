@@ -1,0 +1,94 @@
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #80808042;
+    display: none;
+}
+body:hover .overlay{
+    display: block;
+}
+
+#sidebar{
+    width: 250px;
+    background-color: gray;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sidebar .logo{
+    position: relative;
+}
+
+#sidebar .logo .logo-text{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+#sidebar .logo .logo-badge{
+    width: 18px;
+    height: 85%;
+    background: #1a2a6c; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px;
+    position: absolute;
+    top:-10px;
+    transform: rotate(20deg);
+}
+
+.logo .logo-badge.badge-left{
+    left: 25%;
+}
+.logo .logo-badge.badge-right{
+    left: 55%;
+}
+
+#sidebar .menu{
+    margin: 0;
+    padding:0;
+}
+
+#sidebar .menu .menu-item{
+    list-style: none;
+    padding: 12px 8px;
+}
+
+#sidebar .menu .menu-item a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.menu-item a::after{
+    content: "";
+    position: absolute;
+    bottom:-4px;
+    left: 0;
+    width:30%;
+    height: 4px;
+    background-color: orange;
+    border-radius: 14px;
+    transition: all 0.4s;
+}
+
+.menu-item a:hover::after{
+    width:100%;
+}

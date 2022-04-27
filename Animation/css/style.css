@@ -1,0 +1,23 @@
+.box
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: boxAnimation;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0, 0.81, 1, 0.12);
+    /* animation-direction: reverse; */
+}
+
+@keyframes boxAnimation{
+    0%{
+        background-color: red;
+        transform: translateX(0px) rotate(0deg);
+    }
+    100%{
+        background-color: yellow;
+        transform: translateX(700px) rotate(45deg);
+    }
+  
+}
